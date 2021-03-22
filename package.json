@@ -1,13 +1,13 @@
 {
   "name": "bellsmarket-syntax",
   "theme": "syntax",
-  "version": "0.3.0",
-  "description": "A short description of your syntax theme",
+  "version": "0.0.0",
+  "description": "Bell's Market Original Syntax Theme",
   "keywords": [
     "syntax",
     "theme"
   ],
-  "repository": "https://github.com/atom/bellsmarket-syntax",
+  "repository": "https://github.com/bellsmarket/bellsmarket-syntax",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
