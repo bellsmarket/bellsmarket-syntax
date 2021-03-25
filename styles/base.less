@@ -52,9 +52,8 @@ atom-text-editor {
 }
 
 // Syntax styles
-
 .syntax--comment {
-  color: @light-gray;
+  // color: @green;
   font-style: italic;
 }
 
@@ -197,7 +196,6 @@ atom-text-editor {
     }
   }
 
-
   &.syntax--section {
     &.syntax--embedded {
       color: darken(@red, 10%);
@@ -206,9 +204,6 @@ atom-text-editor {
         font-style: italic;
       }
     }
-    // &.syntax--bracket {
-    //   color: @orange;
-    // }
   }
   &.syntax--separator {
 
@@ -266,7 +261,6 @@ atom-text-editor {
 
   &.syntax--name.syntax--tag {
     color: @red;
-    // text-decoration: underline;
   }
 
   &.syntax--other.syntax--attribute-name {
@@ -277,6 +271,7 @@ atom-text-editor {
     }
   }
 }
+
 .syntax--meta {
   &.syntax--tag.syntax--sgml.syntax--doctype {
     color: @blue;
@@ -285,10 +280,6 @@ atom-text-editor {
   &.syntax--class {
     color: @light-orange;
   }
-
-  // &.syntax--link {
-  //   color: @orange;
-  // }
 
   &.syntax--require {
     color: @blue;
@@ -373,41 +364,67 @@ atom-text-editor.editor {
   }
 }
 
-// Mini editor
+//  ######### Style for Status Bar #########
 atom-text-editor[mini] .scroll-view {
   padding-left: 1px;
+  background: white;
 }
 
 
-
-
-
-// Vim mode Plus
-.status-bar-vim-mode-plus-normal,
-.status-bar-vim-mode-plus-insert,
-.status-bar-vim-mode-plus-visual {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  font-size: 1.4rem;
-  text-align: center;
+atom-text-editor .gutter {
+  min-width: 0;
 }
 
 
+//  ######### Style for Status Bar #########
+// <<<<<<<<<<<< Status Bar
+//  Style for Status bar-left
+.status-bar-left {
+  .cursor-position {
+    font-size: 1.3rem;
+    background: @cursor-position-bg;
+    a {
+      color: @cursor-position-color;
+    }
+  }
 
-.status-bar-vim-mode-plus-normal {
-  background-color: @normal-bg;
-  color: @normal-color;
-}
+} // End for Status bar-left
 
-.status-bar-vim-mode-plus-insert {
-  // background-color: @insert-bg;
-  background-color: @insert-second-bg;
-  // color: @insert-color;
-  color: @insert-bg;
-  width: 78.78px;
-}
-.status-bar-vim-mode-plus-visual {
-  background-color: @replace-bg;
-  color: @replace-color;
-  width: 78.78px;
-}
+
+//  Status Bar >>>>>>>>>>>>
+//  Style for Status bar-right
+.status-bar-right {
+  //  Style for Vim mode Plus
+  #status-bar-vim-mode-plus {
+    background: none;
+    color:white;
+
+    .status-bar-vim-mode-plus-normal,
+    .status-bar-vim-mode-plus-insert,
+    .status-bar-vim-mode-plus-visual {
+      padding-left: .8rem;
+      padding-right: .8rem;
+      font-size: 1.3rem;
+      text-align: center;
+    }
+
+    .status-bar-vim-mode-plus-normal {
+      background-color: @normal-bg;
+      color: @normal-color;
+    }
+
+    .status-bar-vim-mode-plus-insert {
+      // background-color: @insert-bg;
+      background-color: @insert-second-bg;
+      // color: @insert-color;
+      color: @insert-bg;
+      width: 78.78px;
+    }
+    .status-bar-vim-mode-plus-visual {
+      background-color: @replace-bg;
+      color: @replace-color;
+      width: 78.78px;
+    }
+  }  //   End for Vim mode Plus //
+} // End for Status bar-right
+//  ######### End for Status Bar #########
